@@ -14,6 +14,8 @@ Al click su una thumb, visualizzare in grande l’immagine corrispondente
 
 * stabilisco una struttura adatta su html (essenzialmente avrò un img a cui vario :src facendola cambiare al click dei btn next e prev)
 
+* (stampo dinamicamente le miniature in side con un ciclo v-for)
+
 * sposto le funzioni create precedentemente nei methods di App cercando di mantenerne adatto il funzionamento
 
 * ?proseguire dopo

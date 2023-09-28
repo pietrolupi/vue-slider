@@ -29,6 +29,10 @@ body{
   position: relative;
 }
 
+.pictures-container>div{
+  height: 100%;
+}
+
 .pictures-container img {
   width: 100%;
   height: 100%;
