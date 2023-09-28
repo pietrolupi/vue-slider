@@ -39,7 +39,7 @@ createApp({
         ],
 
         counter: 0,
-        
+        autoScroll: true
 
     }
   },
@@ -60,12 +60,23 @@ createApp({
       }else{
         this.counter--;
       }
-    }
+    },
+
+/*     autoNext(){
+      setInterval(() => {
+        if(this.autoScroll){
+          this.showNext()
+        }
+        
+      }, 5000);
+    } */
+
   },
 
   mounted(){
     console.log('WEEEEE VEU CE STA');
     console.log(this.counter);
+    this.autoNext()
   }
 }).mount('#app')
 

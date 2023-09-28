@@ -14,8 +14,14 @@ Al click su una thumb, visualizzare in grande l’immagine corrispondente
 
 * stabilisco una struttura adatta su html (essenzialmente avrò un img a cui vario :src facendola cambiare al click dei btn next e prev)
 
-* (stampo dinamicamente le miniature in side con un ciclo v-for)
+* (stampo dinamicamente le miniature in side con un ciclo v-for, assegnandogli anche un index)
 
-* sposto le funzioni create precedentemente nei methods di App cercando di mantenerne adatto il funzionamento
+* quando index=counter la side img ha la classe active, e la mask con cui creo l'effetto scuro ha la classe d-none
 
-* ?proseguire dopo
+* aggiungo un evento click alla side img : il counter assume il valore dell'index assegnato alla side img (in pratica cliccando l'immagine main corrisponderà alla side)
+
+* aggiungo un set interval sfruttando le funzioni di scorrimento precedentemente create
+
+* creo uno "switch" true/false che sarà regolato dal bottone di inversione per regolare la direzione dello scorrimento automatico.
+
+* creo un altro "switch" true. All'hover del mouse sul quadrante principale diventerà false. Lo userò per regolare l'interruzione dello scorrimento automatico.
