@@ -19,8 +19,14 @@
 <body>
   <div class="main-wrapper">
     <div class="container" id="app">
-      <div class="slider d-flex">
+      
+      <!-- al mouseover sullo slider lo scorrimento automatico si blocca -->
+      <div 
+      @mouseover="autoScroll = false" 
+      @mouseleave="autoScroll= true"
+      class="slider d-flex">
 
+    <!-- IMMAGINE MAIN -->
         <div class="pictures-container w-75 ">
           <div>
           <img :src="images[counter].image" alt="">
@@ -30,10 +36,11 @@
             <p>{{images[counter].text}}</p>
           </div>
         </div>
-          <!-- qua andranno i div con img e testo -->
+          
         </div>
-
-        
+    <!-- //IMMAGINE MAIN -->
+    
+    <!-- BOTTONI -->    
 
         <button
         @click="showPrev()" 
@@ -44,13 +51,15 @@
 
         <button 
         @click="showNext()"
-        class="slide-btn bot"
+        class="slide-btn bot">
+        <i class="fa-solid fa-chevron-down"></i></button>
         
-        ><i class="fa-solid fa-chevron-down"></i></button>
-        <button class="slide-btn reverse-btn"><i class="fa-solid fa-repeat"></i></button>
+        <button @click="reverseScroll = !reverseScroll" class="slide-btn reverse-btn"><i class="fa-solid fa-repeat"></i></button>
 
         <div class="side-imgs h-100 w-25 ">
-
+    <!-- //BOTTONI -->
+    
+    
     <!-- IMMAGINI SMALL LATERALI -->
           <div 
           v-for="(item, index) in images" 
@@ -60,8 +69,8 @@
 
             <div class="mask" :class="{'d-none' : index === counter}"></div>
             <img :src="images[index].image" alt="">
-    <!--//IMMAGINI SMALL LATERALI-->
           </div>
+    <!--//IMMAGINI SMALL LATERALI-->
           
           
           

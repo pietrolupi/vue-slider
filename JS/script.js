@@ -39,7 +39,9 @@ createApp({
         ],
 
         counter: 0,
-        autoScroll: true
+        autoScroll: true,
+        reverseScroll: false
+
 
     }
   },
@@ -62,14 +64,18 @@ createApp({
       }
     },
 
-/*     autoNext(){
+    autoNext(){
       setInterval(() => {
         if(this.autoScroll){
-          this.showNext()
+
+          if(this.reverseScroll){
+            this.showPrev()
+          }else{
+            this.showNext()
+          }     
         }
-        
-      }, 5000);
-    } */
+      }, 3000);
+    }
 
   },
 
